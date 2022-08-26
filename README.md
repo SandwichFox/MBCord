@@ -1,18 +1,19 @@
-# MBCord
+# MBCord (fork from oonqt)
 
-![License](https://badgen.net/github/license/oonqt/MBCord) ![Version](https://badgen.net/github/release/oonqt/MBCord) ![Stars](https://badgen.net/github/stars/oonqt/MBCord) ![Closed Issues](https://badgen.net/github/closed-issues/oonqt/mbcord) ![Issues](https://badgen.net/github/open-issues/oonqt/MBCord) ![Download count](https://badgen.net/github/assets-dl/oonqt/MBCord)
+![License](https://badgen.net/github/license/oonqt/MBCord) ![Version](https://badgen.net/github/release/SandwichFox/MBCord) ![Stars](https://badgen.net/github/stars/SandwichFox/MBCord) ![Closed Issues](https://badgen.net/github/closed-issues/SandwichFox/mbcord) ![Issues](https://badgen.net/github/open-issues/SandwichFox/MBCord) ![Download count](https://badgen.net/github/assets-dl/SandwichFox/MBCord)
 
 ## MBCord is a Discord rich presence client for [Jellyfin](https://jellyfin.org) and [Emby](https://emby.media/)
 
-### Version 3 is here!!
+### Maintained by me. With newest Dependencies and Bugfixes.
 
 ### First time or looking for some answers? Check out the [Wiki](https://github.com/oonqt/MBCord/wiki)
 
-### Appreciate the work on this project? You can donate me some BTC here: bc1qdh2d66l9deda7z4ts2kfm6l6y2jqjlr9sw7uzl
-
 ### Looking for downloads? Check out the [releases page](https://github.com/oonqt/mbcord/releases)
 
-### A star ✨ on the repository is always appreciated!
+### Jellyfin Playing:
 
+![1661532162119](image/README/1661532162119.png)
 
-![Emby](https://i.memester.xyz/u/zg0a.png)
+##### Jellyfin Paused:
+
+![1661532147637](https://file+.vscode-resource.vscode-cdn.net/d%3A/Dokumente/Development/MBCord/image/README/1661532147637.png)
