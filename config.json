@@ -1,7 +1,7 @@
 {
     "clientIds": {
         "emby": "843293609960275968",
-        "jellyfin": "843294504420769823"
+        "jellyfin": "1012702875744485377"
     },
     "updateCheckInterval": 900000,
     "maxLogFileSizeMB": 50,

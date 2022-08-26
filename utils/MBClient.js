@@ -1,4 +1,5 @@
 const request = require('request');
+var agent;
 
 class MBClient {
 	/**
@@ -49,6 +50,8 @@ class MBClient {
 		return new Promise((resolve, reject) => {
 			request({
 				url: url + `?format=json&ConnectUserId=${connectUserId}`,
+				agent: false,
+				strictSSL: false,
 				headers: {
 					'x-emby-token': connectUserToken
 				},
