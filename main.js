@@ -627,7 +627,6 @@ let updateChecker;
 					smallImageText: session.PlayState.IsPaused ? 'Paused' : 'Playing',
 					instance: false
 				};
-
 				if (!session.PlayState.IsPaused) {
 					data.useTimeElapsed
 						? (defaultProperties.startTimestamp = startTimestamp)
