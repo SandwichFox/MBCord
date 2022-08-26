@@ -10,8 +10,8 @@
 
 ### Looking for downloads? Check out the [releases page](https://github.com/oonqt/mbcord/releases)
 
-### Jellyfin Playing:
-
-### Jellyfin Paused:
+## Jellyfin Playing:
+![1661532162119](image/README/1661532162119.png)
+## Jellyfin Paused:
 
 ![1661532147637](image/README/1661532147637.png)
