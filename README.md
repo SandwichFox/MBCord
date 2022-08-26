@@ -12,8 +12,6 @@
 
 ### Jellyfin Playing:
 
-![1661532162119](image/README/1661532162119.png)
-
-##### Jellyfin Paused:
+### Jellyfin Paused:
 
 ![1661532147637](https://file+.vscode-resource.vscode-cdn.net/d%3A/Dokumente/Development/MBCord/image/README/1661532147637.png)
