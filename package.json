@@ -1,5 +1,5 @@
 {
-  "name": "MBCord",
+  "name": "mbcord",
   "version": "3.0.1",
   "description": "An Emby/Jellyfin rich presence client for Discord",
   "main": "main.js",
