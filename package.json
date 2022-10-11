@@ -4,7 +4,25 @@
   "description": "An Emby/Jellyfin rich presence client for Discord",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "release": "electron-builder --publish always"
+  },
+  "build": {
+    "win": {
+      "icon": "icons/win/icon.ico",
+      "publish": "github"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "icons/mac/icon.icns",
+      "publish": "github"
+    },
+    "linux": {
+      "category": "Utility",
+      "icon": "icons/large.png",
+      "target": ["AppImage"],
+      "publish": "github"
+    }
   },
   "author": "oonqt",
   "license": "MIT",
