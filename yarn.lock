@@ -803,9 +803,9 @@ electron-unhandled@^3.0.2:
     ensure-error "^2.0.0"
     lodash.debounce "^4.0.8"
 
-electron-util@^0.16.0:
-  version "0.16.0"
-  resolved "https://registry.npmjs.org/electron-util/-/electron-util-0.16.0.tgz"
+electron-util@^0.17.2:
+  version "0.17.2"
+  resolved "https://registry.yarnpkg.com/electron-util/-/electron-util-0.17.2.tgz#6b0fe798ae0154585e7e0e96a707bfeae592be05"
   dependencies:
     electron-is-dev "^1.1.0"
     new-github-issue-url "^0.2.1"
