@@ -1,4 +1,4 @@
-name: Compile MBCord
+name: Build/Release MBCord
 
 on:
   push:
@@ -9,27 +9,25 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  release:
+    runs-on: ${{ matrix.os }}
 
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: ubuntu-latest
 
     steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v1
 
-    - name: Check out Git repository
-      uses: actions/checkout@v3
-
-    - name: Install Node.js, NPM and Yarn
-      uses: actions/setup-node@v1
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v1
         with:
           node-version: 10
 
-    - name: Electron Builder Action
-      uses: samuelmeuli/action-electron-builder@v1.6.0
-
-
-    - name: Build/release Electron app
-      uses: samuelmeuli/action-electron-builder@v1
-       with:
+      - name: Build/release Electron app
+        uses: samuelmeuli/action-electron-builder@v1
+        with:
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
           github_token: ${{ secrets.github_token }}
