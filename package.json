@@ -34,7 +34,7 @@
     "colors": "^1.4.0",
     "dedent-js": "^1.0.1",
     "deep-cleaner": "^1.2.1",
-    "discord-rpc": "^3.2.0",
+    "discord-rpc": "^4.0.1",
     "electron-context-menu": "^3.1.1",
     "electron-store": "^8.0.0",
     "electron-unhandled": "^4.0.1",
