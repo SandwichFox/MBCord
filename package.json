@@ -28,7 +28,7 @@
     "electron-installer-zip": "^0.1.2",
     "electron-packager": "^16.0.0",
     "rimraf": "^3.0.2",
-    "yarn-upgrade-all": "^0.5.4"
+    "yarn-upgrade-all": "^0.7.1"
   },
   "dependencies": {
     "colors": "^1.4.0",
