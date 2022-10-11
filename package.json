@@ -47,7 +47,7 @@
     "request": "^2.88.2",
     "semver": "^7.3.8",
     "untildify": "^4.0.0",
-    "uuid": "^8.3.2"
+    "uuid": "^9.0.0"
   },
   "homepage": "https://github.com/SandwichFox/MBCord"
 }
