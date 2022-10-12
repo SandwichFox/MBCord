@@ -20,7 +20,7 @@
     "linux": {
       "category": "Utility",
       "icon": "icons/large.png",
-      "target": ["AppImage"],
+      "target": ["AppImage","deb"],
       "publish": "github"
     }
   },
