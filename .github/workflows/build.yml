@@ -44,5 +44,5 @@ jobs:
           name: dist-with-out-unpacked
           path: |
             dist
-            !dist/**/*-unpacked
+            !dist/*-unpacked
             
