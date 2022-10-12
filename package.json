@@ -8,14 +8,14 @@
     "release": "electron-builder --publish always"
   },
   "author": {
-  "name" : "SandwichFox",
-  "email" : "sandwichfox@team.fuly.network",
-  "url" : "https://sandwichfox.de"
-  }, 
+    "name": "SandwichFox",
+    "email": "sandwichfox@team.fuly.network",
+    "url": "https://sandwichfox.de"
+  },
   "contributor": {
-  "name" : "SoftwareRat",
-  "email" : "softwarerat@sandwichfox.de",
-  "url" : "https://softwarerat.xyz"
+    "name": "SoftwareRat",
+    "email": "softwarerat@sandwichfox.de",
+    "url": "https://softwarerat.xyz"
   },
   "build": {
     "win": {
@@ -30,20 +30,24 @@
     "linux": {
       "category": "Utility",
       "icon": "icons/large.png",
-      "target": ["AppImage","deb"],
+      "target": [
+        "AppImage",
+        "deb"
+      ],
       "publish": "github"
     }
   },
   "license": "MIT",
   "devDependencies": {
-    "electron": "^15.5.5",
+    "electron": "^21.1.0",
     "electron-builder": "^23.6.0",
-    "electron-installer-zip": "^0.1.2",
     "electron-packager": "^16.0.0",
     "rimraf": "^3.0.2",
     "yarn-upgrade-all": "^0.7.1"
   },
   "dependencies": {
+    "@electron/get": "^2.0.1",
+    "@materializecss/materialize": "^1.1.0",
     "colors": "^1.4.0",
     "dedent-js": "^1.0.1",
     "deep-cleaner": "^1.2.1",
@@ -52,10 +56,12 @@
     "electron-store": "^8.0.0",
     "electron-unhandled": "^4.0.1",
     "electron-util": "^0.17.2",
+    "got": "^12.5.2",
     "json-stringify-safe": "^5.0.1",
     "keytar": "^7.7.0",
+    "lodash": "^4.17.12",
     "material-icons": "^1.12.0",
-    "materialize-css": "^1.0.0",
+    "minimatch": "^5.1.0",
     "mkdirp": "^1.0.4",
     "request": "^2.88.2",
     "semver": "^7.3.8",

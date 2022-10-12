@@ -16,4 +16,4 @@ linux:
     - deb
   publish: github
 files: []
-electronVersion: 6.1.12
+electronVersion: 21.1.1
