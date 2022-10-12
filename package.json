@@ -24,7 +24,8 @@
       "publish": "github"
     }
   },
-  "author": "oonqt",
+  "author": "SandwichFox",
+  "email": "sandwichfox@team.fuly.network"
   "license": "MIT",
   "devDependencies": {
     "electron": "^21.1.0",
