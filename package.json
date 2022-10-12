@@ -36,7 +36,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "electron": "^21.1.0",
+    "electron": "^15.5.5",
     "electron-builder": "^23.6.0",
     "electron-installer-zip": "^0.1.2",
     "electron-packager": "^16.0.0",
