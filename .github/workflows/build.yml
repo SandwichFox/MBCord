@@ -42,8 +42,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with: 
           path: |
-            dist
-            !dist/*-unpacked
-            !dist/*.yml
-            !dist/*.blockmap
+            dist/*.exe
+            dist/*.appImage
+            dist/*.deb
+            dist/*.dmg
             
