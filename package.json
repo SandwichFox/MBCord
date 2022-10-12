@@ -1,0 +1,66 @@
+{
+  "name": "mbcord",
+  "version": "3.0.2",
+  "description": "An Emby/Jellyfin rich presence client for Discord",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "release": "electron-builder --publish always"
+  },
+  "author": {
+  "name" : "SandwichFox",
+  "email" : "sandwichfox@team.fuly.network",
+  "url" : "https://sandwichfox.de"
+  }, 
+  "contributor": {
+  "name" : "SoftwareRat",
+  "email" : "softwarerat@sandwichfox.de",
+  "url" : "https://softwarerat.xyz"
+  },
+  "build": {
+    "win": {
+      "icon": "icons/win/icon.ico",
+      "publish": "github"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "icons/mac/icon.icns",
+      "publish": "github"
+    },
+    "linux": {
+      "category": "Utility",
+      "icon": "icons/large.png",
+      "target": ["AppImage","deb"],
+      "publish": "github"
+    }
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^21.1.0",
+    "electron-builder": "^23.6.0",
+    "electron-installer-zip": "^0.1.2",
+    "electron-packager": "^16.0.0",
+    "rimraf": "^3.0.2",
+    "yarn-upgrade-all": "^0.7.1"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dedent-js": "^1.0.1",
+    "deep-cleaner": "^1.2.1",
+    "discord-rpc": "^4.0.1",
+    "electron-context-menu": "^3.1.1",
+    "electron-store": "^8.0.0",
+    "electron-unhandled": "^4.0.1",
+    "electron-util": "^0.17.2",
+    "json-stringify-safe": "^5.0.1",
+    "keytar": "^7.7.0",
+    "material-icons": "^1.12.0",
+    "materialize-css": "^1.0.0",
+    "mkdirp": "^1.0.4",
+    "request": "^2.88.2",
+    "semver": "^7.3.8",
+    "untildify": "^4.0.0",
+    "uuid": "^9.0.0"
+  },
+  "homepage": "https://github.com/SandwichFox/MBCord"
+}
