@@ -3,3 +3,4 @@ build/
 todos.txt
 .DS_STORE
 .vs
+dist/*
