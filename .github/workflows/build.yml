@@ -9,6 +9,8 @@ on:
     branches: [ master ]
     paths:
       - 'package.json'
+  workflow_dispatch:
+
 
 env:
   GH_TOKEN: ${{ secrets.github_token }}
