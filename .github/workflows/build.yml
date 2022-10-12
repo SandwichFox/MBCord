@@ -41,8 +41,9 @@ jobs:
       - name: Upload Artifacts 
         uses: actions/upload-artifact@v3
         with: 
-          name: dist-with-out-unpacked
           path: |
             dist
             !dist/*-unpacked
+            !dist/*.yml
+            !dist/*.blockmap
             
