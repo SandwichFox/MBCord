@@ -68,8 +68,5 @@
     "untildify": "^4.0.0",
     "uuid": "^9.0.0"
   },
-  "optionalDependencies": {
-    "dmg-license": "^1.1.0"
-  },
   "homepage": "https://github.com/SandwichFox/MBCord"
 }
