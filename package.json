@@ -26,7 +26,7 @@
   },
   "name" : "SandwichFox",
   "email" : "sandwichfox@team.fuly.network",
-  "url" : "https://sandwichfox.de"
+  "url" : "https://sandwichfox.de",
   "license": "MIT",
   "devDependencies": {
     "electron": "^21.1.0",
