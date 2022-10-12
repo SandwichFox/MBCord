@@ -35,3 +35,6 @@ jobs:
 
       - name: Build/Release Electron app
         run: npm run release
+        
+      - name: Upload Artifacts 
+        uses: actions/upload-artifact@v3
