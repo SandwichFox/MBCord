@@ -11,6 +11,11 @@
   "name" : "SandwichFox",
   "email" : "sandwichfox@team.fuly.network",
   "url" : "https://sandwichfox.de"
+  }, 
+  "contributor": {
+  "name" : "SoftwareRat",
+  "email" : "softwarerat@sandwichfox.de",
+  "url" : "https://softwarerat.xyz"
   },
   "build": {
     "win": {
