@@ -7,6 +7,11 @@
     "start": "electron .",
     "release": "electron-builder --publish always"
   },
+  "author": {
+  "name" : "SandwichFox",
+  "email" : "sandwichfox@team.fuly.network",
+  "url" : "https://sandwichfox.de
+  },
   "build": {
     "win": {
       "icon": "icons/win/icon.ico",
@@ -24,9 +29,6 @@
       "publish": "github"
     }
   },
-  "name" : "SandwichFox",
-  "email" : "sandwichfox@team.fuly.network",
-  "url" : "https://sandwichfox.de",
   "license": "MIT",
   "devDependencies": {
     "electron": "^21.1.0",
