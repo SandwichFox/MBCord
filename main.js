@@ -123,7 +123,8 @@ let updateChecker;
 			Node version: ${process.versions.node}
 			Electron version: ${electronVersion}
 			Chrome version: ${chromeVersion}
-		`;
+			`;
+	
 	}
 
 	logger.info('Starting app...');
@@ -139,7 +140,7 @@ let updateChecker;
 		showDialog: true,
 		reportButton: error => {
 			openNewGitHubIssue({
-				user: author,
+				user: author.name,
 				repo: name,
 				labels: ['bug'],
 				body: `\`\`\`\n${error.stack}\n\`\`\`\n\n---\n\n${debugInfo()}`
