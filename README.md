@@ -12,8 +12,7 @@ First time or looking for some answers? Check out the [Wiki](https://github.com/
 
 
 ## Previews
-Jellyfin Playing:
+### Jellyfin Playing:
 ![1661532162119](image/README/1661532162119.png)
-## Jellyfin Paused:
-
+### Jellyfin Paused:
 ![1661532147637](image/README/1661532147637.png)
