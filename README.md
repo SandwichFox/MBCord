@@ -8,22 +8,18 @@ Maintained by me. With newest Dependencies and Bugfixes.\
 \
 First time or looking for some answers? Check out the [Wiki](https://github.com/oonqt/MBCord/wiki)
 
-## Installation
-### For Windows
-You can either install it via the [releases](https://github.com/SandwichFox/MBCord/releases/latest)\
-**OR**\
-You can install it via winget:
-```powershell
-winget install --id=SandwichFox.mbcord -e 
-```
-### For Linux
-#### Arch, Manjaro and EndeavourOS based Distributions
-MBCord is in the AUR, but its not maintained by me! Its maintained by [SoftwareRat](https://github.com/SoftwareRat)
+### Install Sources
+[![Get it from Github](https://img.shields.io/badge/Get_It_From_GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SandwichFox/MBCord/releases/latest)
 
-**https://aur.archlinux.org/packages/mbcord-appimage**
+[![Get it from Windows Package Manager](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Winget_-100000?style=for-the-badge&logo=winstall)](https://winstall.app/apps/SandwichFox.mbcord)
 
-#### Debian and Ubunutu based Distributions
-You can either install it via the [releases](https://github.com/SandwichFox/MBCord/releases/latest)
+<!---
+[![Get it from Chocolatey Package Manager](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Chocolatey_-100000?style=for-the-badge&logo=chocolatey)](https://community.chocolatey.org/packages/cider)
+[![Get it from Flathub](https://img.shields.io/badge/Get_It_From_Flathub-100000?style=for-the-badge&logo=flathub)](https://flathub.org/apps/details/sh.cider.Cider)
+!---->
+
+[![Get it from the AUR](https://img.shields.io/badge/Get_It_From_The_AUR-100000?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/packages/mbcord-appimage) **(Not maintained by me)**
+
 
 
 ## Previews
