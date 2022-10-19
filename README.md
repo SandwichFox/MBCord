@@ -4,11 +4,11 @@
 
 ## MBCord is a Discord rich presence client for [Jellyfin](https://jellyfin.org) and [Emby](https://emby.media/)
 
-Maintained by me. With newest Dependencies and Bugfixes.\
+Maintained by me, with the latest dependences and bug fixes.\
 \
-First time or looking for some answers? Check out the [Wiki](https://github.com/oonqt/MBCord/wiki)
+First time or looking for some answers? Visit the [Wiki](https://github.com/oonqt/MBCord/wiki)
 
-### Install Sources
+### Installation
 [![Get it from Github](https://img.shields.io/badge/Get_It_From_GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SandwichFox/MBCord/releases/latest)
 
 [![Get it from Windows Package Manager](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Winget_-100000?style=for-the-badge&logo=winstall)](https://winstall.app/apps/SandwichFox.mbcord)
