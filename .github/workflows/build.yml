@@ -46,22 +46,5 @@ jobs:
             dist/*.appImage
             dist/*.deb
             dist/*.dmg
-            
-  flatpak:
-    name: "Flatpak"
-    runs-on: ubuntu-latest
-    container:
-      image: bilelmoussaoui/flatpak-github-actions:gnome-40
-      options: --privileged
-    steps:
-    - uses: actions/checkout@v2
-    - uses: flatpak/flatpak-github-actions/flatpak-builder@v4
-      with:
-        bundle: palette.flatpak
-        manifest-path: org.gnome.zbrown.Palette.yml
-        cache-key: flatpak-builder-${{ github.sha }}
-    - name: Upload Artifacts 
-      uses: actions/upload-artifact@v3
-       
   
       
