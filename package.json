@@ -32,7 +32,8 @@
       "icon": "icons/large.png",
       "target": [
         "AppImage",
-        "deb"
+        "deb",
+        "flatpak"
       ],
       "publish": "github"
     }
