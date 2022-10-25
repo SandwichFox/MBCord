@@ -46,7 +46,7 @@
     "yarn-upgrade-all": "^0.7.1"
   },
   "dependencies": {
-    "@electron/get": "^2.0.1",
+    "@electron/get": "^2.0.2",
     "@materializecss/materialize": "^1.1.0",
     "colors": "^1.4.0",
     "dedent-js": "^1.0.1",
