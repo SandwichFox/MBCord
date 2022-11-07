@@ -41,7 +41,7 @@
   "devDependencies": {
     "electron": "^21.2.0",
     "electron-builder": "^23.6.0",
-    "electron-packager": "^17.1.0",
+    "electron-packager": "^17.1.1",
     "rimraf": "^3.0.2",
     "yarn-upgrade-all": "^0.7.1"
   },
