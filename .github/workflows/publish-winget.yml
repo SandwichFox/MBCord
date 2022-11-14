@@ -10,4 +10,5 @@ jobs:
         with:
           identifier: SandwichFox.mbcord
           installers-regex: '\.exe$' # Only .exe files
+          delete-previous-version: 'true' # don't forget to quotes
           token: ${{ secrets.WINGET_TOKEN }}
