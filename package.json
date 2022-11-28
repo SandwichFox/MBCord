@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@electron/get": "^2.0.2",
-    "@materializecss/materialize": "^1.1.0",
+    "@materializecss/materialize": "^1.2.0",
     "colors": "^1.4.0",
     "dedent-js": "^1.0.1",
     "deep-cleaner": "^1.2.1",
