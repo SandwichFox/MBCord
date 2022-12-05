@@ -61,7 +61,7 @@
     "keytar": "^7.7.0",
     "lodash": "^4.17.12",
     "material-icons": "^1.12.2",
-    "minimatch": "^5.1.0",
+    "minimatch": "^5.1.1",
     "mkdirp": "^1.0.4",
     "request": "^2.88.2",
     "semver": "^7.3.8",
