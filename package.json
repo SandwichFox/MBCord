@@ -52,7 +52,7 @@
     "dedent-js": "^1.0.1",
     "deep-cleaner": "^1.2.1",
     "discord-rpc": "^4.0.1",
-    "electron-context-menu": "^3.6.0",
+    "electron-context-menu": "^3.6.1",
     "electron-store": "^8.0.0",
     "electron-unhandled": "^4.0.1",
     "electron-util": "^0.17.2",
