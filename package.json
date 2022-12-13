@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "release": "electron-builder --publish always",
-    "prerelease": "electron-builder --win=portable"
+    "pre": "electron-builder --win=portable"
   },
   "author": {
     "name": "SandwichFox",
