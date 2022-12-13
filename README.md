@@ -15,8 +15,8 @@ First time or looking for some answers? Visit the [Wiki](https://github.com/Sand
 
 [![Get it from Windows Package Manager](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Winget_-100000?style=for-the-badge&logo=winstall)](https://winstall.app/apps/SandwichFox.mbcord)
 
+[![Get it from Chocolatey Package Manager](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Chocolatey_-100000?style=for-the-badge&logo=chocolatey)](https://community.chocolatey.org/packages/mbcord)
 <!---
-[![Get it from Chocolatey Package Manager](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Chocolatey_-100000?style=for-the-badge&logo=chocolatey)](https://community.chocolatey.org/packages/cider)
 [![Get it from Flathub](https://img.shields.io/badge/Get_It_From_Flathub-100000?style=for-the-badge&logo=flathub)](https://flathub.org/apps/details/sh.cider.Cider)
 !---->
 
