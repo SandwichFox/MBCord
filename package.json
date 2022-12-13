@@ -1,11 +1,12 @@
 {
   "name": "mbcord",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "An Emby/Jellyfin rich presence client for Discord",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "release": "electron-builder --publish always"
+    "release": "electron-builder --publish always",
+    "prerelease": "electron-builder --win=portable"
   },
   "author": {
     "name": "SandwichFox",
@@ -20,6 +21,10 @@
   "build": {
     "win": {
       "icon": "icons/win/icon.ico",
+      "target": [
+        "portable",
+        "nsis"
+      ],
       "publish": "github"
     },
     "mac": {

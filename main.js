@@ -123,7 +123,7 @@ let updateChecker;
 			Node version: ${process.versions.node}
 			Electron version: ${electronVersion}
 			Chrome version: ${chromeVersion}
-			`;
+            `;
 	
 	}
 
@@ -454,24 +454,27 @@ let updateChecker;
 			if (data.pending) {
 				if (!calledFromTray) clearInterval(updateChecker);
 
-				dialog.showMessageBox(
-					{
+				options ={
 						type: 'info',
-						buttons: ['Okay', 'Get Latest Version'],
-						message: 'A new version is available!',
-						detail: `Your version is ${version}. The latest version currently available is ${data.version}`
+						buttons: ['Okay', 'Get the latest version', 'Remind Me Later'],
+						title: 'MBCord: Update Available',
+						message: 'A new version of MBCord is available!',
+						detail: `Version ${data.version} is available.\nYou are currently on version ${version}. Would you like to download the latest version?`
 					},
-					(index) => {
-						if (index === 1) {
-							shell.openExternal(`${homepage}/releases/latest`);
+				dialog.showMessageBox(options, (response) => {
+						if (response === 1) {
+							shell.openExternal(`https://sandwichfox.de`);
 						}
-					}
-				);
+                        else if (response === 2) {
+                            updateChecker = setInterval(() => checkForUpdates(true), 1000 * 60 * 60 * 24);
+                            console.log(updateChecker);
+                        }
+					});
 			} else if (calledFromTray) {
 				dialog.showMessageBox({
-					title: name,
+					title: 'No Updates are Available',
 					type: 'info',
-					message: 'There are no new versions available to download'
+					message: `You are up to date! The latest version is ${data.version}.`,
 				});
 			}
 		});
@@ -650,6 +653,7 @@ let updateChecker;
 							}${
 								episodeNum ? `E${episodeNum.toString().padStart(2, '0')}: ` : ''
 							}${NPItem.Name}`,
+							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.SeriesId}/Images/Primary`,
 							...defaultProperties
 						});
 						break;
@@ -660,6 +664,7 @@ let updateChecker;
 							state: `${NPItem.Name} ${
 								NPItem.ProductionYear ? `(${NPItem.ProductionYear})` : ''
 							}`,
+							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.MediaId}/Images/Primary`,
 							...defaultProperties
 						});
 						break;
@@ -674,6 +679,7 @@ let updateChecker;
 							state: `By ${
 								artists.length ? artists.join(', ') : 'Unknown Artist'
 							}`,
+							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.MediaId}/Images/Primary`,
 							...defaultProperties
 						});
 						break;
@@ -695,6 +701,7 @@ let updateChecker;
 									? albumArtists.join(', ')
 									: 'Unknown Artist'
 							}`,
+							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.MediaId}/Images/Primary`,
 							...defaultProperties
 						});
 						break;
@@ -703,6 +710,7 @@ let updateChecker;
 						rpc.setActivity({
 							details: 'Watching Other Content',
 							state: NPItem.Name,
+							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.MediaId}/Images/Primary`,
 							...defaultProperties
 						});
 				}
