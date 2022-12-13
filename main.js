@@ -623,7 +623,7 @@ let updateChecker;
 				);
 
 				const defaultProperties = {
-					largeImageKey: 'large',
+					//largeImageKey: 'large',
 					largeImageText: `${
 						NPItem.Type === 'Audio' ? 'Listening' : 'Watching'
 					} on ${session.Client}`,
@@ -701,7 +701,7 @@ let updateChecker;
 									? albumArtists.join(', ')
 									: 'Unknown Artist'
 							}`,
-							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.MediaId}/Images/Primary`,
+							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.Id}/Images/Primary`,
 							...defaultProperties
 						});
 						break;
@@ -721,6 +721,7 @@ let updateChecker;
 		} catch (error) {
 			logger.error(`Failed to set activity: ${error}`);
 		}
+		
 	};
 
 	ipcMain.on('RECEIVE_INFO', async (event) => {
