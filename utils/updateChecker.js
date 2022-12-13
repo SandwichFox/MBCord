@@ -55,12 +55,12 @@ class GithubClient {
 
 				if (semver.lte(this.version, body.tag_name)) {
 					cb(null, {
-						pending: true,
+						pending: false,
 						version: body.tag_name
 					});
 				} else {
 					cb(null, {
-						pending: false,
+						pending: true,
 						version: body.tag_name
 					});
 				}
