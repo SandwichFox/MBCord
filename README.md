@@ -35,3 +35,4 @@ First time or looking for some answers? Visit the [Wiki](https://github.com/Sand
 ### Translations
 
 [![German/Deutsch](image/README/README-DE.png)](translation/README-DE.md)
+[![French/français](image/README/README-FR.png)](translation/README-FR.md)
