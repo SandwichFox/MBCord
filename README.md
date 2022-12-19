@@ -34,4 +34,4 @@ First time or looking for some answers? Visit the [Wiki](https://github.com/Sand
 
 ### Translations
 
-[![German/Deutsch](image/README/german.png)](translation/README-DE.md)
+[![German/Deutsch](image/README/README-DE.png)](translation/README-DE.md)
