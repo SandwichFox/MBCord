@@ -12,18 +12,22 @@ Erstes Mal oder suchst nach einer Antwort? Besuch die [Wiki](https://github.com/
 ### Installation
 
 Hole es dir von Github:
+
 [![Get it from Github](https://img.shields.io/badge/Get_It_From_GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SandwichFox/MBCord/releases/latest)
 
 Hole es dir von Windows Paket Manager (winget):
+
 [![Get it from Windows Package Manager](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Winget_-100000?style=for-the-badge&logo=winstall)](https://winstall.app/apps/SandwichFox.mbcord)
 
 Hole es dir von Chocolatey:
+
 [![Get it from Chocolatey Package Manager](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Chocolatey_-100000?style=for-the-badge&logo=chocolatey)](https://community.chocolatey.org/packages/mbcord)
 <!---
 Hole es dir von Flathub:
 [![Get it from Flathub](https://img.shields.io/badge/Get_It_From_Flathub-100000?style=for-the-badge&logo=flathub)](https://flathub.org/apps/details/sh.cider.Cider)
 !---->
 Hole es dir von der AUR:
+
 [![Get it from the AUR](https://img.shields.io/badge/Get_It_From_The_AUR-100000?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/packages/mbcord-appimage) **(Nicht von mir maintained)**
 
 ## Vorschau
