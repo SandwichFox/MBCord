@@ -30,10 +30,10 @@ Hole es dir von der AUR:
 
 ### Jellyfin Spielt:
 
-![1661532162119](image/README/1661532162119.png)
+![1661532162119](../image/README/1661532162119.png)
 
 ### Jellyfin Pausiert:
 
-![1661532147637](image/README/1661532147637.png)
+![1661532147637](../image/README/1661532147637.png)
 
 [![Back to Original](../image/README/BackREADME-DE.png)](https://github.com/SandwichFox/MBCord)
