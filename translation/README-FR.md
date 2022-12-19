@@ -11,30 +11,30 @@ Première fois ou vous cherchez des réponses? Visitez le [Wiki](https://github.
 
 ### Installation
 
-[!Obtenez-le de Github](https://img.shields.io/badge/Get_It_From_GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SandwichFox/MBCord/releases/latest)
+[![Obtenez-le de Github](https://img.shields.io/badge/Get_It_From_GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SandwichFox/MBCord/releases/latest)
 
-[!Obtenez-le du gestionnaire de paquets de Windows](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Winget_-100000?style=for-the-badge&logo=winstall)](https://winstall.app/apps/SandwichFox.mbcord)
+[![Obtenez-le du gestionnaire de paquets de Windows](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Winget_-100000?style=for-the-badge&logo=winstall)](https://winstall.app/apps/SandwichFox.mbcord)
 
-[!Obtenez-le du gestionnaire de paquets Chocolatey](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Chocolatey_-100000?style=for-the-badge&logo=chocolatey)](https://community.chocolatey.org/packages/mbcord)
+[![Obtenez-le du gestionnaire de paquets Chocolatey](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Chocolatey_-100000?style=for-the-badge&logo=chocolatey)](https://community.chocolatey.org/packages/mbcord)
 <!---
-[!Obtenir sur Flathub](https://img.shields.io/badge/Get_It_From_Flathub-100000?style=for-the-badge&logo=flathub)](https://flathub.org/apps/details/sh.cider.Cider)
+[![Obtenir sur Flathub](https://img.shields.io/badge/Get_It_From_Flathub-100000?style=for-the-badge&logo=flathub)](https://flathub.org/apps/details/sh.cider.Cider)
 !---->
 
-[!Get it from the AUR](https://img.shields.io/badge/Get_It_From_The_AUR-100000?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/packages/mbcord-appimage) **(Non maintenu par moi)**.
+[![Get it from the AUR](https://img.shields.io/badge/Get_It_From_The_AUR-100000?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/packages/mbcord-appimage) **(Non maintenu par moi)**.
 
 ## Previews
 
 ### Jellyfin Playing :
 
-![1661532162119](image/README/1661532162119.png)
+![1661532162119](../image/README/1661532162119.png)
 
 ### Jellyfin en pause :
 
-![1661532147637](image/README/1661532147637.png)
+![1661532147637](../image/README/1661532147637.png)
 
 ### Traductions
 
-[ ![Allemand/Deutsch](image/README/README-FR.png)](translation/README-DE.md)
+[![Allemand/Deutsch](../image/README/README-DE.png)](README-DE.md)
 
 
 ### Peut contenir des fautes de frappe
