@@ -32,9 +32,9 @@ Première fois ou vous cherchez des réponses? Visitez le [Wiki](https://github.
 
 ![1661532147637](../image/README/1661532147637.png)
 
-### Traductions
+### Retour à l'original
 
-[![Allemand/Deutsch](../image/README/README-DE.png)](README-DE.md)
-
+[![Retour à l'original](../image/README/BackREADME-FR.png)](https://github.com/SandwichFox/MBCord)
+ 
 
 ### Peut contenir des fautes de frappe
