@@ -653,7 +653,7 @@ let updateChecker;
 							}${
 								episodeNum ? `E${episodeNum.toString().padStart(2, '0')}: ` : ''
 							}${NPItem.Name}`,
-							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.SeriesId}/Images/Primary`,
+							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.Id}/Images/Primary`,
 							...defaultProperties
 						});
 						break;
@@ -664,7 +664,7 @@ let updateChecker;
 							state: `${NPItem.Name} ${
 								NPItem.ProductionYear ? `(${NPItem.ProductionYear})` : ''
 							}`,
-							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.MediaId}/Images/Primary`,
+							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.Id}/Images/Primary`,
 							...defaultProperties
 						});
 						break;
@@ -679,7 +679,7 @@ let updateChecker;
 							state: `By ${
 								artists.length ? artists.join(', ') : 'Unknown Artist'
 							}`,
-							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.MediaId}/Images/Primary`,
+							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.Id}/Images/Primary`,
 							...defaultProperties
 						});
 						break;
@@ -710,7 +710,7 @@ let updateChecker;
 						rpc.setActivity({
 							details: 'Watching Other Content',
 							state: NPItem.Name,
-							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.MediaId}/Images/Primary`,
+							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.Id}/Images/Primary`,
 							...defaultProperties
 						});
 				}

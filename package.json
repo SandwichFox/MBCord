@@ -1,10 +1,11 @@
 {
   "name": "mbcord",
-  "version": "3.0.6",
+  "version": "3.0.7-beta",
   "description": "An Emby/Jellyfin rich presence client for Discord",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "prepare": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install",
     "release": "electron-builder --publish always",
     "pre": "electron-builder --win=portable"
   },
