@@ -1,0 +1,39 @@
+name: Build/Release MBCord
+
+on:
+  workflow_dispatch:
+
+
+env:
+  GH_TOKEN: ${{ secrets.github_token }}
+
+jobs:
+  release:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [windows-latest]
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Clean install NPM
+        run: npm clean-install
+
+      - name: Build/Release Electron app
+        run: npm run pre
+        
+      - name: Upload Artifacts 
+        uses: actions/upload-artifact@v3
+        with: 
+          path: |
+            dist/*.exe
+  
+      
