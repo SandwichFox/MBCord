@@ -635,10 +635,23 @@ let updateChecker;
 					data.useTimeElapsed
 						? (defaultProperties.startTimestamp = startTimestamp)
 						: (defaultProperties.endTimestamp = endTimestamp);
-				}
+				};
+
+				const Name = NPItem.Name;
+						const num = 100;
+						const limitString = (Name = '', num = 1) => {
+							const { length } = Name;
+							if(num < length){
+								return Name.slice(0, num) + '...';
+							}else {
+								return Name;
+							};
+						};
+						console.log(limitString(Name, num));
 
 				switch (NPItem.Type) {
 					case 'Episode': {
+						
 						// prettier-ignore
 						const seasonNum = NPItem.ParentIndexNumber
 						// prettier-ignore
@@ -652,7 +665,7 @@ let updateChecker;
 								seasonNum ? `S${seasonNum.toString().padStart(2, '0')}` : ''
 							}${
 								episodeNum ? `E${episodeNum.toString().padStart(2, '0')}: ` : ''
-							}${NPItem.Name}`,
+							}${limitString(Name, num)}`,
 							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.Id}/Images/Primary`,
 							...defaultProperties
 						});
@@ -661,7 +674,7 @@ let updateChecker;
 					case 'Movie': {
 						rpc.setActivity({
 							details: 'Watching a Movie',
-							state: `${NPItem.Name} ${
+							state: `${limitString(Name, num)} ${
 								NPItem.ProductionYear ? `(${NPItem.ProductionYear})` : ''
 							}`,
 							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.Id}/Images/Primary`,
@@ -673,7 +686,7 @@ let updateChecker;
 						const artists = NPItem.Artists.splice(0, 3); // we only want 3 artists
 
 						rpc.setActivity({
-							details: `Watching ${NPItem.Name} ${
+							details: `Watching ${limitString(Name, num)} ${
 								NPItem.ProductionYear ? `(${NPItem.ProductionYear})` : ''
 							}`,
 							state: `By ${
@@ -691,7 +704,7 @@ let updateChecker;
 						).splice(0, 3);
 
 						rpc.setActivity({
-							details: `Listening to ${NPItem.Name} ${
+							details: `Listening to ${limitString(Name, num)} ${
 								NPItem.ProductionYear ? `(${NPItem.ProductionYear})` : ''
 							}`,
 							state: `By ${
