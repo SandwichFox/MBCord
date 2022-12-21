@@ -23,7 +23,6 @@
     "win": {
       "icon": "icons/win/icon.ico",
       "target": [
-        "portable",
         "nsis"
       ],
       "publish": "github"
@@ -63,6 +62,7 @@
     "electron-unhandled": "^4.0.1",
     "electron-util": "^0.17.2",
     "got": "^12.5.3",
+    "husky": "^8.0.2",
     "json-stringify-safe": "^5.0.1",
     "keytar": "^7.7.0",
     "lodash": "^4.17.12",

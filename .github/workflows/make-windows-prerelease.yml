@@ -1,4 +1,4 @@
-name: Build/Release MBCord
+name: Prerelease Windows
 
 on:
   workflow_dispatch:
@@ -24,10 +24,12 @@ jobs:
         with:
           node-version: 16
 
+          
+
       - name: Clean install NPM
         run: npm clean-install
 
-      - name: Build/Release Electron app
+      - name: Build Prerelease Electron app
         run: npm run pre
         
       - name: Upload Artifacts 
