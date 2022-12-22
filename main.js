@@ -647,7 +647,6 @@ let updateChecker;
 								return Name;
 							};
 						};
-						console.log(limitString(Name, num));
 
 				switch (NPItem.Type) {
 					case 'Episode': {
