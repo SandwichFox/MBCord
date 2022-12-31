@@ -454,6 +454,7 @@ let updateChecker;
 			if (data.pending) {
 				if (!calledFromTray) clearInterval(updateChecker);
 
+				const downloadLink = "https://github.com/SandwichFox/mbcord/releases/latest"
 				options ={
 						type: 'info',
 						buttons: ['Okay', 'Get the latest version', 'Remind Me Later'],
@@ -461,15 +462,25 @@ let updateChecker;
 						message: 'A new version of MBCord is available!',
 						detail: `Version ${data.version} is available.\nYou are currently on version ${version}. Would you like to download the latest version?`
 					},
-				dialog.showMessageBox(options, (response) => {
+					dialog.showMessageBox(options).then((dialogOutput) => {
+						const response = dialogOutput.response;
 						if (response === 1) {
+							shell.openExternal(downloadLink);
+						}
+						else if (response === 2) {
+							updateChecker = setInterval(() => checkForUpdates(true), 1000 * 60 * 60 * 24);
+							console.log(updateChecker);
+						}
+					});
+
+						/*/if (response === 1) {
 							shell.openExternal(`https://sandwichfox.de`);
 						}
                         else if (response === 2) {
                             updateChecker = setInterval(() => checkForUpdates(true), 1000 * 60 * 60 * 24);
                             console.log(updateChecker);
                         }
-					});
+					});/*/
 			} else if (calledFromTray) {
 				dialog.showMessageBox({
 					title: 'No Updates are Available',

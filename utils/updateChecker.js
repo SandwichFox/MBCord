@@ -46,27 +46,31 @@ class GithubClient {
 				if (err) return cb(err, null);
 				if (res.statusCode !== 200)
 					return cb(`Status: ${res.statusCode} Body: ${body}`);
-					console.log(semver.lte(this.version, body.tag_name));
+					
 				
+
+				
+				console.log(this.version, body.tag_name)
+				console.log(semver.compare(this.version, body.tag_name))
+				console.log(semver.lte(this.version, body.tag_name))	
 				// prettier-ignore
 				// const currentVersion = this.constructor.extractVersionAsInt(this.version);
 				// // prettier-ignore
 				// const latestVersion = this.constructor.extractVersionAsInt(body.tag_name);
-
-				if (semver.lte(this.version, body.tag_name)) {
-					cb(null, {
-						pending: false,
+				
+				if (semver.compare(this.version, body.tag_name) === -1) {
+					return cb(null, {
+						pending: true,
 						version: body.tag_name
 					});
 				} else {
-					cb(null, {
-						pending: true,
+					return cb(null, {
+						pending: false,
 						version: body.tag_name
 					});
 				}
 			}
 		);
-	console.log(cb);	
 	}
 
 }
