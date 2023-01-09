@@ -22,6 +22,9 @@ First time or looking for some answers? Visit the [Wiki](https://github.com/Sand
 
 [![Get it from the AUR](https://img.shields.io/badge/Get_It_From_The_AUR-100000?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/packages/mbcord-appimage) **(Not maintained by me)**
 
+You want to try preview builds?
+Then click [here](previews/README-previews.md)
+
 ## Previews
 
 ### Jellyfin Playing:
