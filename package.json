@@ -44,7 +44,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "electron": "^22.1.0",
+    "electron": "^22.2.0",
     "electron-builder": "^23.6.0",
     "electron-packager": "^17.1.1",
     "rimraf": "^4.1.2",
