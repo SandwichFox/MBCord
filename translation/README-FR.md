@@ -7,7 +7,7 @@
 
 Maintenu par moi, avec les dernières dépendances et corrections de bugs.
 
-Première fois ou vous cherchez des réponses? Visitez le [Wiki](https://github.com/SandwichFox/MBCord/wiki)
+Première fois où vous cherchez des réponses? Visitez le [Wiki](https://github.com/SandwichFox/MBCord/wiki)
 
 ### Installation
 
