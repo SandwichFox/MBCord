@@ -62,7 +62,7 @@
     "electron-unhandled": "^4.0.1",
     "electron-updater": "^5.3.0",
     "electron-util": "^0.17.2",
-    "got": "^12.5.3",
+    "got": "^12.6.0",
     "husky": "^8.0.3",
     "json-stringify-safe": "^5.0.1",
     "keytar": "^7.7.0",
