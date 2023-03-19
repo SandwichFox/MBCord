@@ -39,7 +39,6 @@ const {
 	maximumSessionInactivity,
 	maxLogFileSizeMB
 } = require('./config.json');
-const { use } = require('builder-util');
 
 /**
  * @type {BrowserWindow}
@@ -133,6 +132,14 @@ let updateChecker;
             `;
 	
 	}
+
+	process.on('uncaughtException', (error) => {
+		logger.error(`Uncaught Exception: ${error.stack}\n`);
+	  });
+	  
+	  process.on('unhandledRejection', (error) => {
+		logger.error(`Unhandled Rejection: ${error.stack}\n`);
+	  });
 
 	logger.info('Starting app...');
 	logger.info(debugInfo());
@@ -362,7 +369,7 @@ let updateChecker;
 				}
 			},
 			{
-				label: 'Use Dynamic Images',
+				label: 'Use Dynamic Images (BETA)',
 				type: 'checkbox',
 				checked: store.get('useDynamicImages'),
 				click: () => {
@@ -611,7 +618,8 @@ let updateChecker;
 					return;
 				}
 
-				const imdbId = NPItem.ProviderIds.Imdb;
+			// For Future Image Handling
+			/*	const imdbId = NPItem.ProviderIds.Imdb;
 
 				// Construct the URL for the IMDb suggestion API
 				const imdbApiUrl = `https://v2.sg.media-imdb.com/suggestion/s/${imdbId}.json`;
@@ -627,7 +635,7 @@ let updateChecker;
 					// Do something with the image URL
 					console.log(MediaimageUrl);
 				})
-				.catch(error => logger.error(error));
+				.catch(error => logger.error(error)); */
 
 
 
@@ -667,7 +675,7 @@ let updateChecker;
 
 					const serverType = server.serverType;
 					let defaultProperties = {};
-					if (serverType === 'jellyfin') {
+					if (serverType === 'jellyfin' && store.get('useDynamicImages') === true){
 						defaultProperties = {
 							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.Id}/Images/Primary`,
 							largeImageText: `${
@@ -678,7 +686,8 @@ let updateChecker;
 							smallImageText: session.PlayState.IsPaused ? 'Paused' : 'Playing',
 							instance: false
 						};
-					} else if (serverType === 'emby') {
+					} 
+					else if (serverType === 'emby' && store.get('useDynamicImages') === true){
 						defaultProperties = {
 							largeImageKey: `${mbc.serverAddress}/emby/Items/${NPItem.Id}/Images/Primary`,
 							largeImageText: `${
@@ -688,7 +697,7 @@ let updateChecker;
 							smallImageText: session.PlayState.IsPaused ? 'Paused' : 'Playing',
 							instance: false
 						};
-					} else if (serverType === 'emby' && useDynamicImages == false){
+					} else if (serverType === 'emby' && store.get('useDynamicImages') === false){
 						defaultProperties = {
 							largeImageKey: `large`,
 							largeImageText: `${
@@ -698,7 +707,7 @@ let updateChecker;
 							smallImageText: session.PlayState.IsPaused ? 'Paused' : 'Playing',
 							instance: false
 						};
-					} else if (serverType == 'jellyfin' && useDynamicImages == false){
+					} else if (serverType == 'jellyfin' && store.get('useDynamicImages') === false){
 						defaultProperties = {
 							largeImageKey: `large`,
 							largeImageText: `${
@@ -708,10 +717,7 @@ let updateChecker;
 							smallImageText: session.PlayState.IsPaused ? 'Paused' : 'Playing',
 							instance: false
 						};
-					}
-
-
-					
+					}	
 
 				// set timestamps
 				if (!session.PlayState.IsPaused) {
