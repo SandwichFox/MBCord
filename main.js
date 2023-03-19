@@ -10,6 +10,7 @@ const {
 } = require('electron');
 const crypto = require('crypto');
 const dedent = require('dedent-js');
+const fetch = require('node-fetch');
 const fs = require('fs');
 const os = require('os');
 const unhandled = require('electron-unhandled');
@@ -38,6 +39,7 @@ const {
 	maximumSessionInactivity,
 	maxLogFileSizeMB
 } = require('./config.json');
+const { use } = require('builder-util');
 
 /**
  * @type {BrowserWindow}
@@ -89,6 +91,10 @@ let updateChecker;
 				type: 'boolean',
 				default: false
 			},
+			useDynamicImages: {
+				type: 'boolean',
+				default: false
+			},
 			UUID: {
 				type: 'string',
 				default: v4()
@@ -123,6 +129,7 @@ let updateChecker;
 			Node version: ${process.versions.node}
 			Electron version: ${electronVersion}
 			Chrome version: ${chromeVersion}
+			
             `;
 	
 	}
@@ -351,8 +358,17 @@ let updateChecker;
 				checked: store.get('useTimeElapsed'),
 				click: () => {
 					const isUsing = store.get('useTimeElapsed');
-
 					store.set({ useTimeElapsed: !isUsing });
+				}
+			},
+			{
+				label: 'Use Dynamic Images',
+				type: 'checkbox',
+				checked: store.get('useDynamicImages'),
+				click: () => {
+					const isUsing = store.get('useDynamicImages');
+					store.set({ useDynamicImages: !isUsing });
+					console.log(store.get('useDynamicImages'));
 				}
 			},
 			{
@@ -469,18 +485,9 @@ let updateChecker;
 						}
 						else if (response === 2) {
 							updateChecker = setInterval(() => checkForUpdates(true), 1000 * 60 * 60 * 24);
-							console.log(updateChecker);
 						}
 					});
 
-						/*/if (response === 1) {
-							shell.openExternal(`https://sandwichfox.de`);
-						}
-                        else if (response === 2) {
-                            updateChecker = setInterval(() => checkForUpdates(true), 1000 * 60 * 60 * 24);
-                            console.log(updateChecker);
-                        }
-					});/*/
 			} else if (calledFromTray) {
 				dialog.showMessageBox({
 					title: 'No Updates are Available',
@@ -594,8 +601,8 @@ let updateChecker;
 
 			if (session) {
 				const NPItem = session.NowPlayingItem;
-
 				const NPItemLibraryID = await mbc.getItemInternalLibraryId(NPItem.Id);
+
 				// convert
 				if (server.ignoredViews.includes(NPItemLibraryID)) {
 					// prettier-ignore
@@ -603,6 +610,26 @@ let updateChecker;
 					if (rpc) await rpc.clearActivity();
 					return;
 				}
+
+				const imdbId = NPItem.ProviderIds.Imdb;
+
+				// Construct the URL for the IMDb suggestion API
+				const imdbApiUrl = `https://v2.sg.media-imdb.com/suggestion/s/${imdbId}.json`;
+
+				// Make a request to the IMDb suggestion API to get the movie data
+				fetch(imdbApiUrl)
+				
+				.then(response => response.json())
+				.then(data => {
+					// Extract the image URL from the movie data
+					const MediaimageUrl = data.d[0].i.imageUrl;
+
+					// Do something with the image URL
+					console.log(MediaimageUrl);
+				})
+				.catch(error => logger.error(error));
+
+
 
 				// remove client IP addresses (hopefully this takes care of all of them)
 				logger.debug(scrubObject(session, 'RemoteEndPoint'));
@@ -633,15 +660,60 @@ let updateChecker;
 					(endTimestamp - currentEpochSeconds) * 1000 + 1500
 				);
 
-				const defaultProperties = {
-					//largeImageKey: 'large',
-					largeImageText: `${
-						NPItem.Type === 'Audio' ? 'Listening' : 'Watching'
-					} on ${session.Client}`,
-					smallImageKey: session.PlayState.IsPaused ? 'pause' : 'play',
-					smallImageText: session.PlayState.IsPaused ? 'Paused' : 'Playing',
-					instance: false
-				};
+
+
+
+					//get server type and set other properties, if useDynamicImages is disabled, use the default images
+
+					const serverType = server.serverType;
+					let defaultProperties = {};
+					if (serverType === 'jellyfin') {
+						defaultProperties = {
+							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.Id}/Images/Primary`,
+							largeImageText: `${
+								NPItem.Type === 'Audio' ? 'Listening' : 'Watching'
+							} on ${session.Client}`,
+
+							smallImageKey: session.PlayState.IsPaused ? 'pause' : 'play',
+							smallImageText: session.PlayState.IsPaused ? 'Paused' : 'Playing',
+							instance: false
+						};
+					} else if (serverType === 'emby') {
+						defaultProperties = {
+							largeImageKey: `${mbc.serverAddress}/emby/Items/${NPItem.Id}/Images/Primary`,
+							largeImageText: `${
+								NPItem.Type === 'Audio' ? 'Listening' : 'Watching'
+							} on ${session.Client}`,
+							smallImageKey: session.PlayState.IsPaused ? 'pause' : 'play',
+							smallImageText: session.PlayState.IsPaused ? 'Paused' : 'Playing',
+							instance: false
+						};
+					} else if (serverType === 'emby' && useDynamicImages == false){
+						defaultProperties = {
+							largeImageKey: `large`,
+							largeImageText: `${
+								NPItem.Type === 'Audio' ? 'Listening' : 'Watching'
+							} on ${session.Client}`,
+							smallImageKey: session.PlayState.IsPaused ? 'pause' : 'play',
+							smallImageText: session.PlayState.IsPaused ? 'Paused' : 'Playing',
+							instance: false
+						};
+					} else if (serverType == 'jellyfin' && useDynamicImages == false){
+						defaultProperties = {
+							largeImageKey: `large`,
+							largeImageText: `${
+								NPItem.Type === 'Audio' ? 'Listening' : 'Watching'
+							} on ${session.Client}`,
+							smallImageKey: session.PlayState.IsPaused ? 'pause' : 'play',
+							smallImageText: session.PlayState.IsPaused ? 'Paused' : 'Playing',
+							instance: false
+						};
+					}
+
+
+					
+
+				// set timestamps
 				if (!session.PlayState.IsPaused) {
 					data.useTimeElapsed
 						? (defaultProperties.startTimestamp = startTimestamp)
@@ -676,7 +748,6 @@ let updateChecker;
 							}${
 								episodeNum ? `E${episodeNum.toString().padStart(2, '0')}: ` : ''
 							}${limitString(Name, num)}`,
-							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.Id}/Images/Primary`,
 							...defaultProperties
 						});
 						break;
@@ -687,7 +758,6 @@ let updateChecker;
 							state: `${limitString(Name, num)} ${
 								NPItem.ProductionYear ? `(${NPItem.ProductionYear})` : ''
 							}`,
-							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.Id}/Images/Primary`,
 							...defaultProperties
 						});
 						break;
@@ -702,7 +772,6 @@ let updateChecker;
 							state: `By ${
 								artists.length ? artists.join(', ') : 'Unknown Artist'
 							}`,
-							largeImageKey: `${mbc.serverAddress}/Items/${NPItem.Id}/Images/Primary`,
 							...defaultProperties
 						});
 						break;
@@ -958,7 +1027,8 @@ let updateChecker;
 					}
 				],
 				isConfigured: true,
-				doDisplayStatus: true
+				doDisplayStatus: true,
+				useDynamicImages: true
 			});
 
 			moveToTray();
