@@ -1,7 +1,14 @@
-# MBCord
+# MBCord 
 
-[![Build/Release MBCord](https://github.com/SandwichFox/MBCord/actions/workflows/build.yml/badge.svg)](https://github.com/SandwichFox/MBCord/actions/workflows/build.yml) ![License](https://badgen.net/github/license/SandwichFox/MBCord) ![Version](https://badgen.net/github/release/SandwichFox/MBCord) 
-![Stars](https://badgen.net/github/stars/SandwichFox/MBCord) ![Closed Issues](https://badgen.net/github/closed-issues/SandwichFox/mbcord) ![Issues](https://badgen.net/github/open-issues/SandwichFox/MBCord) ![Download count](https://badgen.net/github/assets-dl/SandwichFox/MBCord)
+[![Build/Release MBCord](https://img.shields.io/github/actions/workflow/status/SandwichFox/MBCord/build.yml?label=Build%20MBCord&logo=GitHub&style=for-the-badge)](https://github.com/SandwichFox/MBCord/actions/workflows/build.yml) 
+![License](https://img.shields.io/github/license/SandwichFox/MBCord?style=for-the-badge) 
+![Version](https://img.shields.io/github/v/release/SandwichFox/MBCord?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/SandwichFox/MBCord?logo=&style=for-the-badge) 
+![Closed Issues](https://img.shields.io/github/issues-closed-raw/SandwichFox/MBCord?color=green&&style=for-the-badge) 
+![Issues](https://img.shields.io/github/issues-raw/SandwichFox/MBCord?&color=red&style=for-the-badge) 
+![Download count](https://img.shields.io/github/downloads/SandwichFox/MBCord/total?style=for-the-badge)
+
+[![Contributing](https://img.shields.io/badge/Contributing-100000?style=for-the-badge&logo=github)](CONTRIBUTING.md)
 
 ## MBCord ist ein Discord Rich Presense Client für [Jellyfin](https://jellyfin.org) und [Emby](https://emby.media/)
 
@@ -11,24 +18,22 @@ Erstes Mal oder suchst nach einer Antwort? Besuch die [Wiki](https://github.com/
 
 ### Installation
 
-Hole es dir von Github:
 
-[![Get it from Github](https://img.shields.io/badge/Get_It_From_GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SandwichFox/MBCord/releases/latest)
+[![Get it from Github](https://img.shields.io/badge/-Hole%20es%20von%20Github-black?style=for-the-badge&logo=github)](https://github.com/SandwichFox/MBCord/releases/latest)
 
-Hole es dir von Windows Paket Manager (winget):
+[![Get it from Windows Package Manager](https://img.shields.io/badge/-Hole%20es%20dir%20von%20Winget-black?style=for-the-badge&logo=windows11&logoColor=blue)](https://winstall.app/apps/SandwichFox.mbcord)
 
-[![Get it from Windows Package Manager](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Winget_-100000?style=for-the-badge&logo=winstall)](https://winstall.app/apps/SandwichFox.mbcord)
 
-Hole es dir von Chocolatey:
-
-[![Get it from Chocolatey Package Manager](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Chocolatey_-100000?style=for-the-badge&logo=chocolatey)](https://community.chocolatey.org/packages/mbcord)
+[![Get it from Chocolatey Package Manager](https://img.shields.io/badge/-Hole%20es%20von%20Chocolatey-black?style=for-the-badge&logo=chocolatey)](https://community.chocolatey.org/packages/mbcord)
 <!---
-Hole es dir von Flathub:
-[![Get it from Flathub](https://img.shields.io/badge/Get_It_From_Flathub-100000?style=for-the-badge&logo=flathub)](https://flathub.org/apps/details/sh.cider.Cider)
-!---->
-Hole es dir von der AUR:
 
-[![Get it from the AUR](https://img.shields.io/badge/Get_It_From_The_AUR-100000?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/packages/mbcord-appimage) **(Nicht von mir maintained)**
+[![Get it from Flathub](https://img.shields.io/badge/Hole%20Es%20vom%20Flathub-black?style=for-the-badge&logo=flathub)]()
+!---->
+
+[![Get it from the AUR](https://img.shields.io/badge/Hole%20Es%20vom%20aur%20(Nicht%20von%20mir%20Maintained)-black?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/packages/mbcord-appimage)
+
+Du möchtest Preview Builds ausprobieren?\
+Dann drücke [hier](previews/README-previews.md)
 
 ## Vorschau
 
@@ -40,6 +45,4 @@ Hole es dir von der AUR:
 
 ![1661532147637](../image/README/1661532147637.png)
 
-
-## Zurück zum Original
-[![Back to Original](../image/README/BackREADME-DE.png)](https://github.com/SandwichFox/MBCord)
+[![Back to Original](https://img.shields.io/badge/-Zur%C3%BCck%20zum%20Original-black?style=for-the-badge)](https://github.com/SandwichFox/MBCord)

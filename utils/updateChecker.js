@@ -46,13 +46,6 @@ class GithubClient {
 				if (err) return cb(err, null);
 				if (res.statusCode !== 200)
 					return cb(`Status: ${res.statusCode} Body: ${body}`);
-					
-				
-
-				
-				console.log(this.version, body.tag_name)
-				console.log(semver.compare(this.version, body.tag_name))
-				console.log(semver.lte(this.version, body.tag_name))	
 				// prettier-ignore
 				// const currentVersion = this.constructor.extractVersionAsInt(this.version);
 				// // prettier-ignore

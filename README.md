@@ -1,7 +1,14 @@
 # MBCord
 
-[![Build/Release MBCord](https://github.com/SandwichFox/MBCord/actions/workflows/build.yml/badge.svg)](https://github.com/SandwichFox/MBCord/actions/workflows/build.yml) ![License](https://badgen.net/github/license/SandwichFox/MBCord) ![Version](https://badgen.net/github/release/SandwichFox/MBCord) 
-![Stars](https://badgen.net/github/stars/SandwichFox/MBCord) ![Closed Issues](https://badgen.net/github/closed-issues/SandwichFox/mbcord) ![Issues](https://badgen.net/github/open-issues/SandwichFox/MBCord) ![Download count](https://badgen.net/github/assets-dl/SandwichFox/MBCord)
+[![Build/Release MBCord](https://img.shields.io/github/actions/workflow/status/SandwichFox/MBCord/build.yml?label=Build%20MBCord&logo=GitHub&style=for-the-badge)](https://github.com/SandwichFox/MBCord/actions/workflows/build.yml) 
+![License](https://img.shields.io/github/license/SandwichFox/MBCord?style=for-the-badge) 
+![Version](https://img.shields.io/github/v/release/SandwichFox/MBCord?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/SandwichFox/MBCord?logo=&style=for-the-badge) 
+![Closed Issues](https://img.shields.io/github/issues-closed-raw/SandwichFox/MBCord?color=green&&style=for-the-badge) 
+![Issues](https://img.shields.io/github/issues-raw/SandwichFox/MBCord?&color=red&style=for-the-badge) 
+![Download count](https://img.shields.io/github/downloads/SandwichFox/MBCord/total?style=for-the-badge)
+
+[![Contributing](https://img.shields.io/badge/Contributing-100000?style=for-the-badge&logo=github)](CONTRIBUTING.md)
 
 ## MBCord is a Discord rich presence client for [Jellyfin](https://jellyfin.org) and [Emby](https://emby.media/)
 
@@ -13,14 +20,16 @@ First time or looking for some answers? Visit the [Wiki](https://github.com/Sand
 
 [![Get it from Github](https://img.shields.io/badge/Get_It_From_GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SandwichFox/MBCord/releases/latest)
 
-[![Get it from Windows Package Manager](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Winget_-100000?style=for-the-badge&logo=winstall)](https://winstall.app/apps/SandwichFox.mbcord)
+[![Get it from Windows Package Manager](https://img.shields.io/badge/-get%20it%20from%20Winget-black?style=for-the-badge&logo=windows11&logoColor=blue)](https://winstall.app/apps/SandwichFox.mbcord)
 
-[![Get it from Chocolatey Package Manager](https://custom-icon-badges.herokuapp.com/badge/Get_It_via_Chocolatey_-100000?style=for-the-badge&logo=chocolatey)](https://community.chocolatey.org/packages/mbcord)
+[![Get it from Chocolatey Package Manager](https://img.shields.io/badge/-get%20it%20from%20Chocolatey-black?style=for-the-badge&logo=chocolatey)](https://community.chocolatey.org/packages/mbcord)
+
 <!---
-[![Get it from Flathub](https://img.shields.io/badge/Get_It_From_Flathub-100000?style=for-the-badge&logo=flathub)](https://flathub.org/apps/details/sh.cider.Cider)
+[![Get it from Flathub](https://img.shields.io/badge/Get%20it%20from%20Flathub-black?style=for-the-badge&logo=flathub)]()
 !---->
 
-[![Get it from the AUR](https://img.shields.io/badge/Get_It_From_The_AUR-100000?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/packages/mbcord-appimage) **(Not maintained by me)**
+[![Get it from the AUR](https://img.shields.io/badge/Get%20it%20from%20the%20aur%20(Not%20Maintained%20by%20me)-black?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/packages/mbcord-appimage) 
+
 
 You want to try preview builds?
 Then click [here](previews/README-previews.md)
@@ -35,7 +44,10 @@ Then click [here](previews/README-previews.md)
 
 ![1661532147637](image/README/1661532147637.png)
 
+
 ### Translations
 
-[![German/Deutsch](image/README/README-DE.png)](translation/README-DE.md)
-[![French/français](image/README/README-FR.png)](translation/README-FR.md)
+[![German/Deutsch](https://img.shields.io/badge/-German%2FDeutsch-black?style=for-the-badge&logo=googletranslate&logoColor=white)](translation/README-DE.md)
+[![French/français](https://img.shields.io/badge/-French%2FFRANCAIS-black?style=for-the-badge&logo=googletranslate&logoColor=white)](translation/README-FR.md)
+
+

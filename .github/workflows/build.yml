@@ -37,6 +37,7 @@ jobs:
       - name: Upload Artifacts 
         uses: actions/upload-artifact@v3
         with: 
+          name: MBCord-Setup-${{ matrix.type }}-${{ matrix.dist }}
           path: |
             dist/*.dmg
 
@@ -62,6 +63,7 @@ jobs:
       - name: Upload Artifacts 
         uses: actions/upload-artifact@v3
         with: 
+          name: MBCord-${{ matrix.type }}-${{ matrix.dist }}
           path: |
             dist/*.deb
             dist/*.appImage
@@ -88,33 +90,6 @@ jobs:
       - name: Upload Artifacts 
         uses: actions/upload-artifact@v3
         with: 
+          name: MBCord-Setup-${{ matrix.type }}-${{ matrix.dist }}
           path: |
             dist/*.exe
-
-  release_flatpak:
-      name: Release Flatpak
-      runs-on: ubuntu-latest
-
-      steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v3
-
-      - name: Install Flatpak and dependencies
-        run: sudo apt install flatpak flatpak-builder
-
-      - name: Install Node.js, NPM and Yarn
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - name: Clean install NPM
-        run: npm clean-install
-
-      - name: Build/Release Electron app
-        run: npm run release
-
-      - name: Upload Artifacts 
-        uses: actions/upload-artifact@v3
-        with: 
-          path: |
-            dist/*.flatpak
