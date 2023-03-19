@@ -26,7 +26,7 @@ jobs:
       - name: Install Node.js, NPM and Yarn
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - name: Clean install NPM
         run: npm clean-install
@@ -52,10 +52,7 @@ jobs:
       - name: Install Node.js, NPM and Yarn
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-
-      - name: Install flatpak dependencies
-        run: sudo apt-get install flatpak flatpak-builder 
+          node-version: 18
 
       - name: Clean install NPM
         run: npm clean-install
@@ -70,7 +67,6 @@ jobs:
           path: |
             dist/*.deb
             dist/*.appImage
-            dist/*.flatpak
 
   release_windows:
     name: Release Windows
@@ -83,7 +79,7 @@ jobs:
       - name: Install Node.js, NPM and Yarn
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - name: Clean install NPM
         run: npm clean-install
