@@ -91,11 +91,11 @@ jobs:
           path: |
             dist/*.exe
 
-    release_flatpak:
-    name: Release Flatpak
-    runs-on: ubuntu-latest
+  release_flatpak:
+      name: Release Flatpak
+      runs-on: ubuntu-latest
 
-    steps:
+      steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
 
