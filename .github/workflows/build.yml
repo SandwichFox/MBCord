@@ -11,17 +11,12 @@ on:
       - 'package.json'
   workflow_dispatch:
 
-
 env:
   GH_TOKEN: ${{ secrets.github_token }}
 
 jobs:
-  release:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+  release_macos:
+    runs-on: macos-latest
 
     steps:
       - name: Check out Git repository
@@ -36,15 +31,60 @@ jobs:
         run: npm clean-install
 
       - name: Build/Release Electron app
-        run: npm run release
-        
+        run: npm run release-macos
+
+      - name: Upload Artifacts 
+        uses: actions/upload-artifact@v3
+        with: 
+          path: |
+            dist/*.dmg
+
+  release_ubuntu:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Clean install NPM
+        run: npm clean-install
+
+      - name: Build/Release Electron app
+        run: npm run release-ubuntu
+
+      - name: Upload Artifacts 
+        uses: actions/upload-artifact@v3
+        with: 
+          path: |
+            dist/*.deb
+            dist/*.appImage
+
+  release_windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Clean install NPM
+        run: npm clean-install
+
+      - name: Build/Release Electron app
+        run: npm run release-windows
+
       - name: Upload Artifacts 
         uses: actions/upload-artifact@v3
         with: 
           path: |
             dist/*.exe
-            dist/*.appImage
-            dist/*.deb
-            dist/*.dmg
-  
-      
+
