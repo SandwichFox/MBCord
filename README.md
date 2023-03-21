@@ -31,7 +31,7 @@ First time or looking for some answers? Visit the [Wiki](https://github.com/Sand
 [![Get it from the AUR](https://img.shields.io/badge/Get%20it%20from%20the%20aur%20(Not%20Maintained%20by%20me)-black?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/packages/mbcord-appimage) 
 
 
-You want to try preview builds?
+You want to try preview builds? \
 Then click [here](https://github.com/SandwichFox/MBCord/actions/workflows/build.yml)
 
 ## Previews
