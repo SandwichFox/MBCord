@@ -33,7 +33,7 @@ Erstes Mal oder suchst nach einer Antwort? Besuch die [Wiki](https://github.com/
 [![Get it from the AUR](https://img.shields.io/badge/Hole%20Es%20vom%20aur%20(Nicht%20von%20mir%20Maintained)-black?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/packages/mbcord-appimage)
 
 Du möchtest Preview Builds ausprobieren?\
-Dann drücke [hier](previews/README-previews.md)
+Dann drücke [hier](https://github.com/SandwichFox/MBCord/actions/workflows/build.yml)
 
 ## Vorschau
 
