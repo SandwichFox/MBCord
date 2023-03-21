@@ -2,15 +2,24 @@
 	user-select: none;
 }
 
-.lever {
-	margin-bottom: 5px;
-}
-
 #retry {
 	display: none;
 	width: 100%;
 	margin-top: 15px;
 }
+
+.progress-bar {
+	animation: progress-bar-stripes 1s linear infinite;
+  }
+  
+  @keyframes progress-bar-stripes {
+	from {
+	  background-position-x: 1rem;
+	}
+	to {
+	  background-position-x: 0;
+	}
+  }
 
 .viewsContainer {
     display: none;
@@ -37,5 +46,9 @@ span.viewName {
 }
 
 #reload:hover {
-	background-color: transparent !important;
+    background-color: white;
 }
+
+#reload:hover > i {
+    color: blueviolet;
+  }

@@ -383,7 +383,7 @@ let updateChecker;
 			},
 			{
 				label: 'Add Server',
-				click: () => loadWindow('configure', { x: 600, y: 300 })
+				click: () => loadWindow('configure', { x: 1000, y: 300 })
 			},
 			{
 				label: 'Select Server',

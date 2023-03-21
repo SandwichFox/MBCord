@@ -3,16 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <title>Configuring Servers...</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="css/configure.css">
         <link rel="stylesheet" href="css/theming.css">
     </head>
-    <body>
-        <div class="splashScreen">
-            <div class="container">
-                <div class="preloader-wrapper large active">
-                    <div class="spinner-layer spinner-green-only">
+        <body>
+            <div class="splashScreen">
+                <div class="container">
+                    <div class="spinner-border text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                        <div class="preloader-wrapper large active">
+                            <div class="spinner-layer spinner-green-only">
                         <div class="circle-clipper left">
                             <div class="circle"></div>
                         </div>
@@ -22,81 +24,93 @@
                         <div class="circle-clipper right">
                             <div class="circle"></div>
                         </div>
+                        </div>        
+                    </div>
+                    </div>
+                    <h2>Attempting to autodetect servers...</h2>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="modal" id="serverDiscoveryModal">
+                    <div class="modal-content">
+                        <h5 class="modal-title">We've auto-detected some servers</h5>
+                        <form id="modalForm">
+                            <div class="row">
+                                <select id="servers"></select>
+                            </div>
+                            <div class="button-row row">
+                                <div class="left-button col s6">
+                                    <button class="btn waves-effect waves-light" type="submit">Select</button>
+                                </div>
+                                <div class="right-button col s6">
+                                    <button class="btn waves-effect waves-light" id="notFound" type='button'>I don't see mine</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
+        
 
-                <h5>Attempting to autodetect servers...</h5>
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="modal" id="serverDiscoveryModal">
-                <div class="modal-content">
-                    <h5 class="modal-title">We've auto-detected some servers</h5>
-                    <form id="modalForm">
+                <div class="container">
+                    <h2 class="title">Let's get you set up</h2>
+        
+                    <form id="configuration">
                         <div class="row">
-                            <select id="servers"></select>
-                        </div>
-                        <div class="button-row row">
-                            <div class="left-button col s6">
-                                <button class="btn waves-effect waves-light" type="submit">Select</button>
-                            </div>
-                            <div class="right-button col s6">
-                                <button class="btn waves-effect waves-light" id="notFound" type='button'>I don't see mine</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="container">
-                <h5 class="title">Let's get you set up</h5>
-
-                <form id="configuration">
-                    <div class="row">
-                        <div class="input-field col s2">
-                            <select id="protocol">
+                          <div class="col-md-2">
+                            <div class="form-floating mb-3">
+                              <select id="protocol" class="form-select">
                                 <option value="http" selected>http://</option>
                                 <option value="https">https://</option>
-                            </select>
-                            <label for="protocol">Protocol</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="serverAddress" type="text" value="localhost">
-                            <label for="serverAddress">Server Address</label>
-                        </div>
-                        <div class="input-field col s2">
-                            <input type="number" id="port" value="8096">
-                            <label for="port">Port</label>
-                        </div>
-                        <div class="input-field col s2">
-                            <select id="serverType">
+                              </select>
+                              <label for="protocol">Protocol</label>
+                            </div>
+                            <button type="button" data-toggle="modal" data-target="serverDiscoveryModal">Launch modal</button>
+                            </div>
+                          <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                              <input id="serverAddress" type="text" value="localhost" class="form-control">
+                              <label for="serverAddress">Server Address</label>
+                            </div>
+                            </div>
+                          <div class="col-md-2">
+                            <div class="form-floating mb-3">
+                              <input type="number" id="port" value="8096" class="form-control">
+                              <label for="port">Port</label>
+                            </div>
+                          </div>
+                          <div class="col-md-2">
+                            <div class="form-floating mb-3">
+                              <select id="serverType" class="form-select">
                                 <option value="emby" selected>Emby</option>
                                 <option value="jellyfin">Jellyfin</option>
-                            </select>
-                            <label for="serverType">Type</label>
+                              </select>
+                              <label for="serverType">Servertype</label>
+                            </div>
+                          </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input id="username" type="text">
-                            <label for="username">Username</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="password" type="password">
-                            <label for="password">Password</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s12">
-                            <button class="btn waves-effect waves-light" id="submitButton" type="submit">
+                        <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="username" placeholder="Username">
+                                <label for="username">Username</label>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                                <label for="password">Password</label>
+                              </div>
+                            </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <button class="btn btn-primary" id="submitButton" type="submit">
                                 Save
-                            </button>
+                              </button>
+                            </div>
+                          </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+                    </form>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <script src="js/themes.js"></script>

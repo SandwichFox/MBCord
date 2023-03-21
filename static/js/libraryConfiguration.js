@@ -29,7 +29,7 @@ ipcRenderer.on('RECEIVE_VIEWS', (_, views) => {
 	document.getElementById('userViewsList').innerHTML = views.availableViews
 		.map(
 			// prettier-ignore
-			(view) => `<li class="collection-item">
+			(view) => `<li class="list-group-item">
                         <span class="viewName">
                             ${view.name}
                         </span>
