@@ -32,7 +32,7 @@ First time or looking for some answers? Visit the [Wiki](https://github.com/Sand
 
 
 You want to try preview builds?
-Then click [here](previews/README-previews.md)
+Then click [here](https://github.com/SandwichFox/MBCord/actions/workflows/build.yml)
 
 ## Previews
 
