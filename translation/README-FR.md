@@ -26,10 +26,13 @@ Première fois où vous cherchez des réponses? Visitez le [Wiki](https://github
 
 [![Obtenez-le du gestionnaire de paquets Chocolatey](https://img.shields.io/badge/-Obtenez--le%20du%20gestionnaire%20de%20paquets%20Chocolatey-black?style=for-the-badge&logo=chocolatey)](https://community.chocolatey.org/packages/mbcord)
 <!---
-[![Obtenir sur Flathub](https://img.shields.io/badge/-Obtenir%20sur%20Flathub-black?style=for-the-badge&logo=flathub)](https://flathub.org/apps/details/sh.cider.Cider)
+[![Obtenir sur Flathub](https://img.shields.io/badge/-Obtenir%20sur%20Flathub-black?style=for-the-badge&logo=flathub)]()
 !---->
 
 [![Get it from the AUR](https://img.shields.io/badge/-Obtenez--le%20de%20l'aur%20(Non%20maintenu%20par%20moi)-black?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/packages/mbcord-appimage)
+
+Vous voulez essayer Preview Builds ?
+Cliquez [ici](https://github.com/SandwichFox/MBCord/actions/workflows/build.yml)
 
 ## Avant-premières
 
