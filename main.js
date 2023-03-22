@@ -197,7 +197,7 @@ let updateChecker;
 			startPresenceUpdater();
 			moveToTray();
 		} else {
-			loadWindow('configure', { x: 600, y: 300 }, false);
+			loadWindow('configure', { x: 1010, y: 300 }, false);
 		}
 
 		checkForUpdates();
@@ -213,7 +213,7 @@ let updateChecker;
 
 		tray.destroy();
 
-		loadWindow('configure', { x: 600, y: 300 }, false);
+		loadWindow('configure', { x: 1010, y: 300 }, false);
 	};
 
 	const toggleDisplay = async () => {
@@ -383,7 +383,7 @@ let updateChecker;
 			},
 			{
 				label: 'Add Server',
-				click: () => loadWindow('configure', { x: 1000, y: 300 })
+				click: () => loadWindow('configure', { x: 1010, y: 300 })
 			},
 			{
 				label: 'Select Server',
@@ -412,9 +412,12 @@ let updateChecker;
 				}
 			},
 			{
-				label: 'Show Logs',
-				click: () => shell.openPath(logger.logPath)
-			},
+				label: 'Show Log File',
+				click: () => {
+				  const logFilePath = path.join(logger.logPath, `latest.log`);
+				  shell.openPath(logFilePath);
+				}
+			  },
 			{
 				label: 'Reset App',
 				click: () => resetApp()

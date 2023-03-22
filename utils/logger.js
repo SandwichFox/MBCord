@@ -64,11 +64,19 @@ class Logger {
 	}
 
 	getLogFilePath() {
-		return path.join(
-			this.path,
-			`${this.loggerName}-${(this.timestamp.getTime() / 1000) | 0}.txt`
-		);
+		const now = new Date();
+		const currentFilePath = path.join(this.path, 'latest.log');
+		const oldFilePath = path.join(this.path, `${this.loggerName}-${(this.timestamp.getTime() / 1000) | 0}.log`);
+		
+		// Rename old log file to appname-timestamp.log
+		if (fs.existsSync(currentFilePath)) {
+			fs.renameSync(currentFilePath, oldFilePath);
+		}
+		
+		this.timestamp = now;
+		return currentFilePath;
 	}
+	
 
 	static formatMessage(message, level) {
 		return `[${Date().toLocaleString()}] ${level}: ${message}\n`;

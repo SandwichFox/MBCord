@@ -33,7 +33,7 @@ ipcRenderer.on('RECEIVE_VIEWS', (_, views) => {
                         <span class="viewName">
                             ${view.name}
                         </span>
-                        <div class="switch">
+                        <div class="form-switch">
                             <label>
                                 <span>${
 									views.ignoredViews.includes(view.id)
@@ -42,8 +42,8 @@ ipcRenderer.on('RECEIVE_VIEWS', (_, views) => {
 								}</span>
 								<input 
 									type="checkbox" 
-									class="viewDisableToggle" 
-									id="${view.id}" 
+									class="viewDisableToggle form-check-input" 
+									id="${view.id} flexSwitchCheckDefault" 
 									${views.ignoredViews.includes(view.id) && 'checked'}
 								>
                                 <span class="lever"></span>
