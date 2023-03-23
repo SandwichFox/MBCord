@@ -30,11 +30,11 @@ ipcRenderer.on('RECEIVE_VIEWS', (_, views) => {
 		.map(
 			// prettier-ignore
 			(view) => `<li class="list-group-item">
-                        <span class="viewName">
+                        <h5 class="viewName">
                             ${view.name}
-                        </span>
+                        </h5>
                         <div class="form-switch">
-                            <label>
+                            <label class="form-switch-label" for="${view.id}">
                                 <span>${
 									views.ignoredViews.includes(view.id)
 										? 'Ignored'
@@ -43,8 +43,9 @@ ipcRenderer.on('RECEIVE_VIEWS', (_, views) => {
 								<input 
 									type="checkbox" 
 									class="viewDisableToggle form-check-input" 
-									id="${view.id} flexSwitchCheckDefault" 
-									${views.ignoredViews.includes(view.id) && 'checked'}
+									id="${view.id}" 
+									id="flexSwitchCheckChecked"
+									${!views.ignoredViews.includes(view.id) && 'checked'}
 								>
                                 <span class="lever"></span>
                             </label>
@@ -55,7 +56,7 @@ ipcRenderer.on('RECEIVE_VIEWS', (_, views) => {
 
 	document.querySelectorAll('.viewDisableToggle').forEach((view) => {
 		view.addEventListener('change', function () {
-			if (this.checked) {
+			if (!this.checked) {
 				view.parentElement.querySelector('span').textContent = 'Ignored';
 			} else {
 				view.parentElement.querySelector('span').textContent = 'Watching';

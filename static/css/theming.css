@@ -21,12 +21,34 @@
 }
 
 .progress {
+	position: absolute;
 	background-color: var(--color-accent);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 75%;
+}
+
+
+#reload {
+	background-color: transparent;
+	border: var(--bs-btn-border-width) solid var(--color);
+	transition: background-color .15s ease-out;
 }
 
 #reload > i {
 	color: var(--color);
+	transition: color .15s ease-out;
 }
+
+#reload:hover {
+	background-color: var(--color);
+}
+
+#reload:hover > i {
+	color: white;
+}
+
 
 .input-field input:focus + label {
 	color: var(--color) !important;
@@ -38,6 +60,9 @@ input:focus {
 }
 
 li > span {
+	color: var(--color) !important;
+}
+li > h5 {
 	color: var(--color) !important;
 }
 

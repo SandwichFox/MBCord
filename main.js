@@ -27,7 +27,7 @@ const UpdateChecker = require('./utils/updateChecker');
 const Logger = require('./utils/logger');
 const serverDiscoveryClient = require('./utils/serverDiscoveryClient');
 const { scrubObject, booleanToYN } = require('./utils/helpers');
-const { version, name, author, homepage } = require('./package.json');
+const { version, productName, name, author, homepage } = require('./package.json');
 const {
 	clientIds,
 	iconUrl,
@@ -112,7 +112,7 @@ let updateChecker;
 		is.development ? 'console' : 'file',
 		path.join(app.getPath('userData'), 'logs'),
 		logRetentionCount,
-		name,
+		productName,
 		maxLogFileSizeMB,
 		store.get('enableDebugLogging')
 	);
@@ -174,7 +174,7 @@ let updateChecker;
 				enableRemoteModule: true
 			},
 			resizable: false,
-			title: name,
+			title: productName,
 			show: false
 		});
 
@@ -191,7 +191,7 @@ let updateChecker;
 			mainWindow.setMenu(null);
 		}
 
-		app.setAppUserModelId(name);
+		app.setAppUserModelId(productName);
 
 		if (store.get('isConfigured')) {
 			startPresenceUpdater();
@@ -316,7 +316,7 @@ let updateChecker;
 		tray.setContextMenu(buildTrayMenu(servers));
 
 		dialog.showMessageBox({
-			title: name,
+			title: 'Server Removed',
 			type: 'info',
 			detail: `Successfully removed server from the server list. ${wasSelected ? 'Since this was the currently selected server, your presence will no longer be displayed.' : ''}`
 		});
@@ -441,7 +441,7 @@ let updateChecker;
 			},
 			{
 				type: 'normal',
-				label: `${name} v${version}`,
+				label: `${productName} v${version}`,
 				enabled: false
 			}
 		]);
@@ -455,13 +455,13 @@ let updateChecker;
 		const servers = store.get('servers');
 		const contextMenu = buildTrayMenu(servers);
 
-		tray.setToolTip(name);
+		tray.setToolTip(productName);
 		tray.setContextMenu(contextMenu);
 
 		if (!is.development) new Notification({
-			title: `${name} ${version}`,
+			title: `${productName} ${version}`,
 			icon: path.join(__dirname, 'icons', 'large.png'),
-			body: `${name} has been minimized to the tray`
+			body: `${productName} has been minimized to the tray`
 		}).show();
 
 		appBarHide(true);
@@ -471,7 +471,7 @@ let updateChecker;
 		checker.checkForUpdate((err, data) => {
 			if (err) {
 				if (calledFromTray) {
-					dialog.showErrorBox(name, 'Failed to check for updates');
+					dialog.showErrorBox(productName, 'Failed to check for updates');
 				}
 				logger.error(err);
 				return;
@@ -899,7 +899,7 @@ let updateChecker;
 			} catch (err) {
 				event.reply('FETCH_FAILED');
 				dialog.showErrorBox(
-					name,
+					productName,
 					'Failed to fetch libraries for your user. Please try the reload button.'
 				);
 
@@ -913,7 +913,7 @@ let updateChecker;
 		} catch (err) {
 			event.reply('FETCH_FAILED');
 			dialog.showErrorBox(
-				name,
+				productName,
 				'Failed to fetch libraries for your user. Please try the reload button.'
 			);
 			logger.error(err);
@@ -991,7 +991,7 @@ let updateChecker;
 		if (emptyFields.length) {
 			mainWindow.webContents.send('VALIDATION_ERROR', emptyFields);
 			dialog.showMessageBox(mainWindow, {
-				title: name,
+				title: productName,
 				type: 'error',
 				detail: 'Please make sure that all the fields are filled in!'
 			});
@@ -999,7 +999,7 @@ let updateChecker;
 		}
 
 		let client = new MBClient(data, {
-			deviceName: name,
+			deviceName: productName,
 			deviceId: store.get('UUID'),
 			deviceVersion: version,
 			iconUrl: iconUrl
@@ -1016,7 +1016,7 @@ let updateChecker;
 			logger.error(error);
 			dialog.showMessageBox(mainWindow, {
 				type: 'error',
-				title: name,
+				title: productName,
 				detail: 'Invalid server address or login credentials'
 			});
 			event.reply('RESET');
@@ -1055,7 +1055,7 @@ let updateChecker;
 			) {
 				dialog.showMessageBox(mainWindow, {
 					type: 'error',
-					title: name,
+					title: productName,
 					detail:
 						'You already configured this server, you can enable it from the tray.'
 				});
@@ -1077,7 +1077,7 @@ let updateChecker;
 				if (getSelectedServer()) {
 					const res = await dialog.showMessageBox({
 						type: 'info',
-						title: name,
+						title: productName,
 						message:
 							'Your server has been successfully added. Would you like to select it automatically?',
 						buttons: ['Yes', 'No']
@@ -1089,7 +1089,7 @@ let updateChecker;
 				} else {
 					dialog.showMessageBox({
 						type: 'info',
-						title: name,
+						title: productName,
 						message:
 							'Your server has been successfully added and has been automatically selected.'
 					});

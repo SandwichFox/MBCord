@@ -8,8 +8,12 @@
 	margin-top: 15px;
 }
 
+.view-name {
+	color: var(--color) !important;
+}
 .progress-bar {
-	animation: progress-bar-stripes 1s linear infinite;
+	width: 100%;
+	animation: progress-bar-stripes 1s linear infinite, progress-bar 1s ease-out;
   }
   
   @keyframes progress-bar-stripes {
@@ -21,20 +25,37 @@
 	}
   }
 
+  @keyframes progress-bar {
+	from {
+	  width: 0;
+	}
+	to {
+	  width: 100%;
+	}
+  }
+
 .viewsContainer {
     display: none;
 }
 
-.switch {
+.form-switch {
+	text-align: right;
 	float: right;
 }
 
-.container {
-	text-align: center;
+.form-switch .form-check-input {
+	margin-left: .5rem;
 }
 
+.form-switch-label {
+	margin-left: 0;
+}
+
+
 .title {
+	margin-top: 15px;
 	margin-bottom: 15px;
+	text-align: center;
 }
 
 span.viewName {
@@ -45,10 +66,12 @@ span.viewName {
 	width: calc(60%);
 }
 
-#reload:hover {
-    background-color: white;
+h5.viewName {
+	display: inline-block;
+	margin-bottom: 0;
 }
 
-#reload:hover > i {
-    color: blueviolet;
-  }
+.form-check-input:checked {
+	background-color: var(--color);
+	border-color: var(--color);
+}
