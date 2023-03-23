@@ -94,28 +94,28 @@ jobs:
           path: |
             dist/*.exe
 
- portable_windows:
-    name: Portable Windows
-    runs-on: windows-latest
+  portable_windows:
+      name: Portable Windows
+      runs-on: windows-latest
 
-    steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v3
+      steps:
+        - name: Check out Git repository
+          uses: actions/checkout@v3
 
-      - name: Install Node.js, NPM and Yarn
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+        - name: Install Node.js, NPM and Yarn
+          uses: actions/setup-node@v3
+          with:
+            node-version: 18
 
-      - name: Clean install NPM
-        run: npm clean-install
+        - name: Clean install NPM
+          run: npm clean-install
 
-      - name: Build/Release Electron app
-        run: npm run pre
+        - name: Build/Release Electron app
+          run: npm run pre
 
-      - name: Upload Artifacts 
-        uses: actions/upload-artifact@v3
-        with: 
-          name: MBCord-Windows-Portable
-          path: |
-            dist/*.exe
+        - name: Upload Artifacts 
+          uses: actions/upload-artifact@v3
+          with: 
+            name: MBCord-Windows-Portable
+            path: |
+              dist/*.exe
