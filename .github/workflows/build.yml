@@ -15,24 +15,20 @@ env:
   GH_TOKEN: ${{ secrets.github_token }}
 
 jobs:
-  delete-draft-release:
+  delete-old-drafts:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Delete Draft Release
-        uses: marvinpinto/action-automatic-releases@latest
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          delete_drafts: true
-          delete_pre_releases: false
-          delete_tag: true
-          tag_name: ${{ github.event.release.tag_name }}
-
+      - name: Delete old drafts
+        run: |
+          find . -name '*.md' -type f -mtime +0 -exec rm {} \;
+          
   release_macos:
     name: Release MacOS
     runs-on: macos-latest
-
+    needs: delete-old-drafts
+    
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
@@ -58,6 +54,7 @@ jobs:
   release_ubuntu:
     name: Release Ubuntu
     runs-on: ubuntu-latest
+    needs: delete-old-drafts
 
     steps:
       - name: Check out Git repository
@@ -85,6 +82,7 @@ jobs:
   release_windows:
     name: Release Windows
     runs-on: windows-latest
+    needs: delete-old-drafts
 
     steps:
       - name: Check out Git repository
@@ -111,6 +109,7 @@ jobs:
   portable_windows:
       name: Portable Windows
       runs-on: windows-latest
+      needs: delete-old-drafts
 
       steps:
         - name: Check out Git repository
