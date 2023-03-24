@@ -21,12 +21,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Delete old drafts
-        uses: sgpublic/delete-release-action@v1.0
-        with:
-          draft-drop: true
+      - name: Delete drafts
+        uses: hugo19941994/delete-draft-releases@v1.0.0
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
   release_macos:
     name: Release MacOS
