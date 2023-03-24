@@ -15,6 +15,20 @@ env:
   GH_TOKEN: ${{ secrets.github_token }}
 
 jobs:
+  delete-draft-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Delete Draft Release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          delete_drafts: true
+          delete_pre_releases: false
+          delete_tag: true
+          tag_name: ${{ github.event.release.tag_name }}
+
   release_macos:
     name: Release MacOS
     runs-on: macos-latest
