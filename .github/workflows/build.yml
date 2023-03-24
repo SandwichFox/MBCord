@@ -21,8 +21,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Delete old drafts
-        run: |
-          find . -name '*.md' -type f -mtime +0 -exec rm {} \;
+        uses: sgpublic/delete-release-action@main
+        with:
+          draft-drop: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
           
   release_macos:
     name: Release MacOS
