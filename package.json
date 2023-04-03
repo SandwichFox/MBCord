@@ -69,7 +69,7 @@
     "keytar": "^7.7.0",
     "lodash": "^4.17.12",
     "material-icons": "^1.13.4",
-    "minimatch": "^7.4.2",
+    "minimatch": "^8.0.3",
     "mkdirp": "^2.1.6",
     "node-abi": "^3.33.0",
     "request": "^2.88.2",
