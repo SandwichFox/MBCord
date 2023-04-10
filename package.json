@@ -48,7 +48,7 @@
     "electron": "^23.2.1",
     "electron-builder": "^24.1.2",
     "electron-packager": "^17.1.1",
-    "rimraf": "^4.4.1",
+    "rimraf": "^5.0.0",
     "yarn-upgrade-all": "^0.7.2"
   },
   "dependencies": {
