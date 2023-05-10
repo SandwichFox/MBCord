@@ -11,10 +11,13 @@
 [![Contributing](https://img.shields.io/badge/Contributing-100000?style=for-the-badge&logo=github)](CONTRIBUTING.md)
 
 ## MBCord is a Discord rich presence client for [Jellyfin](https://jellyfin.org) and [Emby](https://emby.media/)
+##### First time or looking for some answers? Visit the [Wiki](https://github.com/SandwichFox/MBCord/wiki)
+
+
+This Repo is based on the work from [oonqt's Repository](https://github.com/oonqt/MBCord)
 
 Maintained by me, with the latest dependences and bug fixes.
 
-First time or looking for some answers? Visit the [Wiki](https://github.com/SandwichFox/MBCord/wiki)
 
 ### Installation
 
