@@ -74,7 +74,7 @@
     "node-abi": "^3.40.0",
     "request": "^2.88.2",
     "semver": "^7.5.3",
-    "untildify": "^4.0.0",
+    "untildify": "^5.0.0",
     "uuid": "^9.0.0"
   },
   "homepage": "https://github.com/SandwichFox/MBCord"
