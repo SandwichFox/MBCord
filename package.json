@@ -71,7 +71,7 @@
     "material-icons": "^1.13.6",
     "minimatch": "^9.0.2",
     "mkdirp": "^3.0.1",
-    "node-abi": "^3.40.0",
+    "node-abi": "^3.45.0",
     "request": "^2.88.2",
     "semver": "^7.5.3",
     "untildify": "^5.0.0",
