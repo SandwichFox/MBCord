@@ -1,4 +1,4 @@
-# THIS REPO IS ON HOLD FOR A WHILE! PLEASE USE [Radiicall's Jellyfin-RPC](https://github.com/Radiicall/jellyfin-rpc), as it is more reliable and updated!
+# THIS REPO IS ON HOLD FOR A WHILE! Please use [Radiicall's Jellyfin-RPC](https://github.com/Radiicall/jellyfin-rpc), as it is more reliable and updated!
 
 # MBCord [ON HOLD]
 
