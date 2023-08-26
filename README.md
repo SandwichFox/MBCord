@@ -1,4 +1,6 @@
-# MBCord
+# THIS REPO IS ON HOLD FOR A WHILE! PLEASE USE [Radiicall's Jellyfin-RPC](https://github.com/Radiicall/jellyfin-rpc), as it is more reliable and updated!
+
+# MBCord [ON HOLD]
 
 [![Build/Release MBCord](https://img.shields.io/github/actions/workflow/status/SandwichFox/MBCord/build.yml?label=Build%20MBCord&logo=GitHub&style=for-the-badge)](https://github.com/SandwichFox/MBCord/actions/workflows/build.yml) 
 ![License](https://img.shields.io/github/license/SandwichFox/MBCord?style=for-the-badge) 
